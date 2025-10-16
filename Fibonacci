@@ -1,0 +1,8 @@
+#Write a Python program to print the n-th Fibonacci number.
+n = int(input("enter: "))
+def fibo_na(n):
+    if n <=1:
+        return n
+    else:
+        return fibo_na(n-1)+fibo_na(n-2)
+print("fib num in position",n,"is:",fibo_na(n))
