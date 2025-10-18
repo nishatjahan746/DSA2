@@ -1,0 +1,10 @@
+#Rod Cutting
+def rod_cut(price,n):
+    dp =[0]*(n+1)
+    for i in range(1,n+1):
+        for j in range(i):
+            dp[i] = max(dp[i],price[j]+dp[i-j-1])
+    return dp[n]
+price=[2,5,7,8]
+n = 4
+print("max: ",rod_cut(price,n))
